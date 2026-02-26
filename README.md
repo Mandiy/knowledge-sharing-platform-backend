@@ -1,79 +1,62 @@
 # Knowledge Sharing Platform – Backend
 
-## 📌 Overview
-This backend powers a Knowledge Sharing Platform that allows users to create, manage and explore technical articles with AI assistance.
+This is the backend service for the **Knowledge Sharing Platform with AI Assist**.
 
-It handles:
-- User authentication using JWT
-- Article CRUD operations
-- AI-powered content improvement
-- AI-generated summaries
+Built using:
 
----
-
-## ⚙️ Tech Stack
 - Node.js
 - Express.js
 - MySQL
 - JWT Authentication
-- Gemini AI API
+
+It provides REST APIs for authentication, article management, search, and AI-assisted content improvement.
 
 ---
 
-## 🧠 Architecture
+## 🔹 Approach
+
+### Architecture Overview
 
 The backend follows a modular MVC-inspired structure:
 
-config/ → Database configuration  
-controllers/ → Business logic  
-middleware/ → JWT auth protection  
-models/ → Database interaction  
-routes/ → API endpoints  
-utils/ → AI integration logic  
-server.js → App entry point  
+- **Routes** handle API endpoints
+- **Controllers** contain business logic
+- **Models** manage database interaction
+- **Middleware** handles authentication and security
+- **Config** manages database connection
+
+This separation ensures scalability, maintainability, and clean API design.
 
 ---
 
-## ✨ Features
+### Folder Structure
 
-### 🔐 Authentication
-- User Signup
-- User Login
-- JWT-based authorization
+npm install
 
-### 📝 Article Management
-- Create Article
-- Edit Article
-- Delete Article
-- View Articles
 
-### 🤖 AI Features
-- Improve Article Content using Gemini
-- Generate AI-based Article Summary
+### Run Server
 
-### 🔎 Search Support
-APIs support filtered and searchable article data.
+npm start
+
 
 ---
 
-## 🤖 AI Usage
+## 🔐 Environment Variables
 
-Gemini AI was integrated to enhance content creation.
+Create `.env` file:
 
-AI helps in:
-- Rewriting content clearly
-- Improving grammar
-- Making content concise
-- Generating summaries
 
-AI responses are processed via utility services and exposed through API endpoints.
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=knowledge_platform
+JWT_SECRET=your_secret
+GEMINI_API_KEY=your_api_key
+
 
 ---
 
-## 🚀 Setup Instructions
+## 🔗 API Base URL
 
-### Prerequisites
-- Node.js
-- MySQL
-
-### Install Dependencies
+http://localhost:5000/api
